@@ -92,14 +92,14 @@ INNER JOIN currencies as c2
 WHERE continent = 'Oceania';
 
 SELECT
-	code,
-	name
+    code,
+    name
 FROM countries
 WHERE
-	continent = 'Oceania' AND
-	code NOT IN (
-		SELECT code FROM currencies
-	);
+    continent = 'Oceania' AND
+    code NOT IN (
+        SELECT code FROM currencies
+    );
 
 --
 

@@ -41,9 +41,9 @@ GROUP BY code;
 
 SELECT local_name, sq.lang_num
 FROM countries,
-  	(SELECT code, COUNT(*) AS lang_num
-  	 FROM languages
-  	 GROUP BY code) AS sq
+      (SELECT code, COUNT(*) AS lang_num
+       FROM languages
+       GROUP BY code) AS sq
     WHERE countries.code = sq.code
 ORDER BY lang_num DESC;
 
